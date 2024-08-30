@@ -73,7 +73,7 @@ async function getRepos() {
 let btnPDF = document.getElementById("cv-pdf");
 btnPDF.addEventListener("click", () => {
   let link = document.createElement("a");
-  link.href = "files/Alaa Saeed.pdf";
+  link.href = "files/alaa-saeed.pdf";
   link.download = "alaa saeed.pdf";
   link.click();
 });
