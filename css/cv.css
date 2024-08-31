@@ -495,7 +495,7 @@ nav {
   background-color: var(--section-background);
 }
 .projects .container p:first-child {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   text-align: center;
 }
@@ -521,13 +521,13 @@ nav {
   outline: 2px solid var(--main-color);
 }
 .projects .container .repos-container .get-repos .get-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 140px;
   margin-left: 10px;
-  height: 54px;
   background-color: var(--main-color);
   color: #fff;
-  line-height: 54px;
-  text-align: center;
   font-weight: bold;
   cursor: pointer;
   border-radius: 6px;
@@ -555,13 +555,12 @@ nav {
   text-align: center;
   padding: 4px;
 }
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .projects .container p:first-child,
-  .projects .container .repos-container .get-repos input {
-    font-size: 18px;
-  }
-  .projects .container .repos-container .get-repos .get-button {
-    width: 170px;
+  .projects .container .repos-container .get-repos input,
+  .projects .container .repos-container .get-repos .get-button,
+  .projects .container .repos-container .show-data .repo-box  {
+    font-size: 12px;
   }
   .projects .container .repos-container .show-data .repo-box a {
     width: 75px;
@@ -583,7 +582,7 @@ nav {
 }
 .objective .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
   align-items: center;
   gap: 30px;
 }
