@@ -279,7 +279,7 @@ nav {
 /* End Nav */
 /* Start Welcome Section */
 .welcome {
-  padding-top: calc(var(--section-padding) - 10px);
+  padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   background-color: var(--section-background);
 }
@@ -293,12 +293,6 @@ nav {
     flex-direction: column;
   }
 }
-.welcome .container h1 {
-  font-size: 34px;
-  width: 100%;
-  text-align: center;
-  margin-bottom: 50px;
-}
 .welcome .container .hello-box {
   display: flex;
   flex-direction: column;
@@ -306,8 +300,8 @@ nav {
   align-items: center;
   width: 75%;
 }
-.welcome .container .hello-box h2 {
-  font-size: 30px;
+.welcome .container .hello-box h1 {
+  font-size: 34px;
   margin-bottom: 20px;
 }
 .welcome .container .hello-box p {
@@ -315,7 +309,6 @@ nav {
   padding: 15px;
   color: var(--writing-color);
   line-height: 1.5;
-  text-align: center;
 }
 .welcome .container .hello-box p:hover {
   color: black;
@@ -332,11 +325,12 @@ nav {
   font-size: 20px;
   font-weight: bold;
   background: var(--main-color);
+  color: white;
   padding: 10px;
   border-radius: 0 0 6px 6px;
 }
 .welcome .container figure figcaption:hover {
-  color: white;
+  color: #f6821f;
 }
 @media (max-width: 575px) {
   .welcome .container .hello-box {
@@ -385,7 +379,6 @@ nav {
 .skills .container .skill h3 {
   font-size: 28px;
   padding: 10px;
-  text-align: center;
   margin-top: 50px;
   color: var(--main-color);
 }
@@ -624,7 +617,7 @@ nav {
   background-color: var(--main-color);
   border-radius: 6px;
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: bold;
   cursor: pointer;
 }
