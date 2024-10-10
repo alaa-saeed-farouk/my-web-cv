@@ -17,6 +17,16 @@
   margin: 0px;
   padding: 0px;
 }
+::-webkit-scrollbar {
+  width: 20px;
+}
+::-webkit-scrollbar-track {
+  background-color: #b9b3b3;
+}
+::-webkit-scrollbar-thumb {
+  background-color:#f6821f;
+  height: 60px;
+}
 body {
   font-family: "Work Sans", Tahoma, Arial, sans-serif;
   background-color: #f6f6f6;
@@ -105,6 +115,15 @@ a {
 }
 .main-heading:hover::before {
   box-shadow: 0 0 0 200px var(--main-color);
+}
+@media (max-width: 575px) {
+  .main-heading {
+    font-size: 25px;
+  }
+  .main-heading:hover {
+    color: white;
+    font-size: 26px;
+  }
 }
 /* Start Components */
 /* Start Header */
