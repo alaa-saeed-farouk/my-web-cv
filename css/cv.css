@@ -583,21 +583,15 @@ footer h2 {
   border-bottom: 2px solid white;
 }
 footer .container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   align-items: center;
-  gap: 30px;
+  justify-content: space-evenly;
 }
 /* For Mobile Screens */
 @media (max-width: 575px) {
   footer .container {
-    grid-template-columns: auto 1fr;
-    gap: 50px;
-  }
-  footer .container .social {
-    display: flex;
     flex-direction: column;
-    gap: 30px;
+    align-items: flex-start;
   }
 }
 footer .container .social a,
@@ -605,8 +599,8 @@ footer .address div i {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-color: #f6821f;
   margin-right: 10px;
   border-radius: 4px;
@@ -615,30 +609,32 @@ footer .address div i {
   cursor: pointer;
   transition: var(--main-duration);
 }
-footer .social a:first-child:hover {
+footer .social div:first-child a:hover {
   background-color: #1877f2;
 }
-footer .social a:nth-child(2):hover {
+footer .social div:nth-child(2) a:hover {
   background-color: #0a66c2;
 }
-footer .social a:last-child:hover {
+footer .social div:last-child a:hover {
   background-color: #fbbc05;
 }
-footer .address div {
+footer .address div, footer .social div {
   padding: 15px;
 }
 footer .address div i {
   cursor: auto;
 }
-footer .address div span {
-  font-size: 18px;
+footer .address div span,
+footer .social div span {
+  font-size: 20px;
 }
 footer .copy-right {
-  padding: 20px;
+  padding: 15px;
   font-size: 20px;
   text-align: center;
   margin-top: 30px;
   border-top: 1px solid rgb(255 255 255 / 10%);
+  background-color: #094b93;
 }
 /* End Footer */
 /* Start Scroll To Top */
