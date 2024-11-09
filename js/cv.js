@@ -8,6 +8,32 @@ function scrollProgress() {
   scrollProg.style.width = `${(scrollY / height) * 100}%`;
 }
 
+// Toggle Menu
+let toggleBtn = document.querySelector(".toggle-box");
+let mainNav = document.querySelector(".main-nav");
+toggleBtn.onclick = function (e) {
+  // Stop Propagation
+  e.stopPropagation();
+  // Toggle Class menu-open on Button
+  this.classList.toggle("menu-open");
+  // Toggle Class open on Links
+  mainNav.classList.toggle("open");
+};
+// Click Anywhere Outside Menu and Toggle Button
+document.addEventListener("click", (e) => {
+  if (e.target !== toggleBtn && e.target !== mainNav) {
+    // Check if Menu Is Open
+    if (mainNav.classList.contains("open")) {
+      mainNav.classList.remove("open");
+      toggleBtn.classList.remove("menu-open");
+    }
+  }
+});
+// Stop Propagation on Menu
+mainNav.onclick = function (e) {
+  e.stopPropagation();
+};
+
 // Fetch My Projects From Github
 let theInput = document.querySelector(".get-repos input");
 let getButton = document.querySelector(".get-button");
